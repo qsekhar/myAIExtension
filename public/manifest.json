@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "A starter Chrome extension built with React and Vite.",
   "action": {
-    "default_popup": "index.html",
+    "default_title": "My AI Extension",
     "default_icon": {
       "16": "icon16.png",
       "32": "icon32.png",
@@ -12,13 +12,19 @@
       "128": "icon128.png"
     }
   },
+  "side_panel": {
+      "default_path": "index.html"
+  },
   "icons": {
     "16": "icon16.png",
     "32": "icon32.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "permissions": [],
+  "permissions": [
+    "activeTab",
+    "sidePanel"
+  ],
   "background": {
     "service_worker": "background.js"
   }
